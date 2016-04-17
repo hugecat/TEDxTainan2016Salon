@@ -21,7 +21,7 @@ jQuery(document).ready(function($){
     //open-close navigation on touch devices
     $('.touch .cd-nav-trigger').on('click', function(){
     	$('.touch #cd-vertical-nav').toggleClass('open');
-  
+
     });
     //close navigation on touch devices when selectin an elemnt from the list
     $('.touch #cd-vertical-nav a').on('click', function(){
@@ -46,4 +46,38 @@ jQuery(document).ready(function($){
         	600
         );
 	}
+
+
+	$(document).ready(function(){
+		$(".l1-block").hide();
+		$(".l2-block").hide();
+		$(".l3-block").hide();
+
+		var prev=".default";
+
+		$(".p3-l1").click(function(){
+			if(prev!=".p3-l1"){
+				$(prev).hide();
+				$(".l1-block").fadeIn("slow");
+				prev=".l1-block";
+			}
+		});
+		$(".p3-l2").click(function(){
+			if(prev!=".p3-l2"){
+				$(prev).hide();
+				$(".l2-block").fadeIn("slow");
+				prev=".l2-block";
+			}
+		});
+		$(".p3-l3").click(function(){
+			if(prev!=".p3-l3"){
+				$(prev).hide();
+				$(".l3-block").fadeIn("slow");
+				prev=".l3-block";
+			}
+		});
+
+});
+
+
 });

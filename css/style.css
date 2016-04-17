@@ -25,8 +25,8 @@ body, html {
 }
 
 .cd-section a {
-  color: white;
   text-decoration: none;
+  color: inherit;
 }
 
 .cd-section a:hover {
@@ -86,27 +86,6 @@ Main components
   color: white;
 }
 
-/*.cd-section h1, .cd-section p {
-  position: absolute;
-  bottom: auto;
-  right: auto;
-  -webkit-transform: translateX(-50%) translateY(-50%);
-  -moz-transform: translateX(-50%) translateY(-50%);
-  -ms-transform: translateX(-50%) translateY(-50%);
-  -o-transform: translateX(-50%) translateY(-50%);
-  transform: translateX(-50%) translateY(-50%);
-  width: 90%;
-  max-width: 768px;
-  text-align: center;
-}*/
-/*.cd-section h1 {
-  color: white;
-  font-weight: 300;
-  text-transform: uppercase;
-  font-size: 50px;
-  font-size: 1.25rem;
-  top: 40%;
-}*/
 .cd-section h1 {
   font-size: 30px;
 }
@@ -183,8 +162,9 @@ Main components
 
 }
 
-/*.thumbnail {
-}*/
+.p2-block1 {
+  margin-left: 20px;
+}
 
 /* page 2-2 */
 .p2-2-h1 {
@@ -209,7 +189,7 @@ Main components
 
 .p2-paragrah2 {
   display: inline-block;;
-  width: 575px;
+  width: 690px;
   height: 150px;
   margin: 50px;
   margin-top: -75px;
@@ -224,6 +204,15 @@ Main components
   margin-left: 57%;
   margin-top: -150px;
   background: white;
+  -webkit-animation-name: changeColor;
+  -webkit-animation-duration: 4s;
+  -webkit-animation-iteration-count: infinite;
+}
+
+@-webkit-keyframes changeColor {
+  0% {background-color: #69020B;}
+  50% {background-color: white;}
+  100% {background-color: #69020B;}
 }
 
 /* page 3 */
@@ -244,12 +233,43 @@ Main components
   background: white;
 }
 
+.default {
+  position: absolute;
+  margin: 20px;
+  margin-top: 15%;
+  width: 400px;
+  height: 150px;
+}
+.l1-block {
+  position: absolute;
+  margin: 20px;
+  margin-top: 15%;
+  width: 500px;
+  height: 150px;
+  padding: 10px;
+}
+.l2-block {
+  position: absolute;
+  margin: 20px;
+  margin-top: 15%;
+  width: 500px;
+  height: 150px;
+  padding: 10px;
+}
+.l3-block {
+  position: absolute;
+  margin: 20px;
+  margin-top: 15%;
+  width: 500px;
+  height: 150px;
+  padding: 10px;
+}
+
 .p3-l1 {
   position: absolute;
   display: inline;
   margin: 50px;
   color: black;
-
 }
 
 .p3-l2 {
@@ -265,6 +285,11 @@ Main components
   display: inline;
   margin-left: 60px;
   margin-top: 225px;
+  color: black;
+}
+
+.p3-block a:hover {
+  color: black;
 }
 
 /* page4 */
@@ -282,10 +307,15 @@ Main components
 
 .p4-h1 {
   position: absolute;
-  text-align: center;
   top: 150%;
-  left: 5%;
+  margin: 0 auto;
   border: 3px solid white;
+  letter-spacing: 3px;
+  text-align: center;
+}
+
+#p4-text {
+  text-align: right;
 }
 
 /* page 5 */
@@ -301,35 +331,52 @@ Main components
 
 }
 
-/*
-.t1 {
+.p5-circle {
   position: absolute;
-  width: 500px;
-  height: 350px;
-  margin-left: 45%;
-  margin-top: 15%
+  display: block;
+  width: 80px;
+  height: 80px;
+	border-radius: 40px;
+  margin: 7%;
+  background: white;
+  color: black;
+  text-align: center;
 }
 
-.t2 {
+.c1 {
+  margin-top: 150px;
+}
+.c1-text {
   position: absolute;
-  width: 500px;
-  height: 350px;
-  margin-left: 60%;
-  margin-top: 15%
+  display: inline-block;
+  margin: 7%;
+  margin-top: 150px;
+  margin-left: 200px;
 }
 
-.t3 {
-  position: absolute;
-  width: 410px;
-  height: 287px;
-  margin-left: 59.1%;
-  margin-top: 23.1%
+.c2 {
+  margin-top: 300px;
 }
-*/
+.c2-text {
+  position: absolute;
+  display: inline-block;
+  margin: 7%;
+  margin-top: 300px;
+  margin-left: 200px;
+}
 
-
-@media only screen and (min-width: 768px) {
-  .cd-sectio h1 {
+.c3 {
+  margin-top: 450px;
+}
+.c3-text {
+  position: absolute;
+  display: inline-block;
+  margin: 7%;
+  margin-top: 450px;
+  margin-left: 200px;
+}
+@media only screen and (max-width: 768px) {
+  .cd-section h1 {
     font-size: 30px;
     /*font-size: 1.875rem;*/
   }
@@ -344,9 +391,64 @@ Main components
     line-height: 2;
   }
 
-  .p2-circle {
-    left: 50%;
+  .p2-1-h1,.p3-h1{
+    float:none;
+    position: relative;
+    text-align:center;
   }
+
+  .p2-block{
+    display:block;
+    margin:0 auto;
+    margin-top:50px;
+  }
+  .p2-2-h1{
+    width:90%;
+    text-align:center;
+  }
+  .p2-paragrah1,.p2-paragrah2{
+    width:100%;
+    margin:0;
+    text-align:center;
+  }
+  .p2-circle{
+    display:block;
+    margin:0 auto;
+  }
+  .p3-h1 {
+    text-align: center;
+    margin: 0 auto;
+  }
+  .p3-block{
+    position:initial;
+    width: 80%;
+    height: 300px;
+    margin:0 auto;
+  }
+  .p4-block{
+    width: 90%;
+    margin:0 auto;
+  }
+
+  .l1-block {
+    position: initial;
+    display: block;
+    width: 90%;
+    margin: 0 auto;
+  }
+  .l2-block {
+    position: initial;
+    display: block;
+    width: 90%;
+    margin: 0 auto;
+  }
+  .l3-block {
+    position: initial;
+    display: block;
+    width: 90%;
+    margin: 0 auto;
+  }
+
 }
 
 .cd-scroll-down {
